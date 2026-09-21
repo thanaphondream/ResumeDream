@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f8fafc;
+    font-family: 'Noto Sans Thai', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* NAVBAR WRAPPER (MINIMAL & CLEAN) */
+.navbar-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.25s ease;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* BRAND / LOGO (MINIMAL) */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.brand-name {
+    color: #ffffff;
+    font-size: 18.5px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.navbar-brand:hover {
+    opacity: 0.85;
+}
+
+/* NAV LINKS (CLEAN & FLAT) */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: transparent;
+    padding: 0;
+    border: none;
+}
+
+.nav-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.nav-icon {
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.nav-item:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.nav-item:hover .nav-icon {
+    opacity: 1;
+}
+
+.nav-item.active {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.12);
+    font-weight: 600;
+    box-shadow: none;
+}
+
+.nav-item.active .nav-icon {
+    opacity: 1;
+    color: #ffffff;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 860px) {
+    .navbar-container {
+        padding: 10px 16px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        margin-top: 4px;
+        overflow-x: auto;
+        gap: 2px;
+    }
+
+    .nav-item {
+        padding: 6px 11px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-item {
+        padding: 5px 8px;
+        gap: 5px;
+        font-size: 12px;
+    }
+
+    .nav-icon {
+        width: 14px;
+        height: 14px;
+    }
+}
